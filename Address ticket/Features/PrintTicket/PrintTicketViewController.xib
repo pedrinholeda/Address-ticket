@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrintTicketViewController" customModule="Address_ticket" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonPrint" destination="iM8-oI-F1Z" id="6IG-yw-LCr"/>
+                <outlet property="labelFullAdress" destination="GL7-50-ZyY" id="GpC-jy-MTz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRa-1v-MLP">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket image" translatesAutoresizingMaskIntoConstraints="NO" id="XZY-Mk-SW7">
+                            <rect key="frame" x="-49" y="20" width="512" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="sD6-uK-6SA"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu endereço aqui" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-50-ZyY">
+                            <rect key="frame" x="20" y="110" width="374" height="484"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM8-oI-F1Z">
+                            <rect key="frame" x="111.66666666666669" y="614" width="191" height="50"/>
+                            <color key="backgroundColor" red="0.9937770963" green="0.41905325650000003" blue="0.0088824816050000008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="191" id="9Kp-W6-NhT"/>
+                                <constraint firstAttribute="height" constant="50" id="d33-z7-iZc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <state key="normal" title="Imprimir">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="ButtonPrintTicket:" destination="-1" eventType="touchUpInside" id="ICM-Gr-4e6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1931256354" green="0.38778376580000001" blue="0.49363070730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="GL7-50-ZyY" firstAttribute="leading" secondItem="dRa-1v-MLP" secondAttribute="leading" constant="20" id="3XE-y6-rJo"/>
+                        <constraint firstAttribute="trailing" secondItem="GL7-50-ZyY" secondAttribute="trailing" constant="20" id="3h2-cd-dEN"/>
+                        <constraint firstItem="iM8-oI-F1Z" firstAttribute="top" secondItem="GL7-50-ZyY" secondAttribute="bottom" constant="20" id="8f4-on-2R6"/>
+                        <constraint firstAttribute="bottom" secondItem="iM8-oI-F1Z" secondAttribute="bottom" constant="72" id="PCs-7e-nr7"/>
+                        <constraint firstItem="XZY-Mk-SW7" firstAttribute="top" secondItem="dRa-1v-MLP" secondAttribute="top" constant="20" id="PDW-6i-gS8"/>
+                        <constraint firstItem="iM8-oI-F1Z" firstAttribute="centerX" secondItem="dRa-1v-MLP" secondAttribute="centerX" id="ROj-rI-9rr"/>
+                        <constraint firstItem="GL7-50-ZyY" firstAttribute="top" secondItem="XZY-Mk-SW7" secondAttribute="bottom" constant="20" id="S6f-SX-mub"/>
+                        <constraint firstItem="XZY-Mk-SW7" firstAttribute="centerX" secondItem="dRa-1v-MLP" secondAttribute="centerX" id="TaV-jT-mJQ"/>
+                        <constraint firstItem="iM8-oI-F1Z" firstAttribute="centerX" secondItem="GL7-50-ZyY" secondAttribute="centerX" id="hEq-LH-L2e"/>
+                        <constraint firstItem="GL7-50-ZyY" firstAttribute="centerX" secondItem="dRa-1v-MLP" secondAttribute="centerX" id="pnA-rn-Jge"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.1931256354" green="0.38778376580000001" blue="0.49363070730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dRa-1v-MLP" secondAttribute="bottom" id="XXK-0P-c0f"/>
+                <constraint firstItem="dRa-1v-MLP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iCe-Df-N1O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dRa-1v-MLP" secondAttribute="trailing" id="ifb-QT-CG0"/>
+                <constraint firstItem="dRa-1v-MLP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="p17-ST-yFV"/>
+            </constraints>
+            <point key="canvasLocation" x="136.875" y="88.732394366197184"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ticket image" width="512" height="512"/>
+    </resources>
+</document>
